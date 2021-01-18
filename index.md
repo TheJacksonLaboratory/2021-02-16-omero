@@ -3,21 +3,21 @@ layout: workshop      # DON'T CHANGE THIS.
 # More detailed instructions (including how to fill these variables for an
 # online workshop) are available at
 # https://carpentries.github.io/workshop-template/customization/index.html
-venue: "FIXME"        # brief name of the institution that hosts the workshop without address (e.g., "Euphoric State University")
-address: "FIXME"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria"), videoconferencing URL, or 'online'
-country: "FIXME"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes) for the institution that hosts the workshop
-language: "FIXME"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) for the
-latitude: "45"        # decimal latitude of workshop venue (use https://www.latlong.net/)
-longitude: "-1"       # decimal longitude of the workshop venue (use https://www.latlong.net)
-humandate: "FIXME"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
-humantime: "FIXME"    # human-readable times for the workshop (e.g., "9:00 am - 4:30 pm")
-startdate: FIXME      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
-enddate: FIXME        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
-instructor: ["instructor one", "instructor two"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
-helper: ["helper one", "helper two"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
-email: ["first@example.org","second@example.org"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
+venue: "The Jackson Laboratory"        # brief name of the institution that hosts the workshop without address (e.g., "Euphoric State University")
+address: "online"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria"), videoconferencing URL, or 'online'
+country: "us"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes) for the institution that hosts the workshop
+language: "en"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) for the
+latitude: "41.732416"        # decimal latitude of workshop venue (use https://www.latlong.net/)
+longitude: "-72.793754"       # decimal longitude of the workshop venue (use https://www.latlong.net)
+humandate: "Feb 16 & 23, 2021"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
+humantime: "1:00 pm - 4:00 pm"    # human-readable times for the workshop (e.g., "9:00 am - 4:30 pm")
+startdate: 2021-02-16      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
+enddate: 2021-02-23        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
+instructor: ["Erick Ratamero"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
+helper: ["Dave Mellert", "Eric Perlman", "Neil Kindlon"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
+email: ["susan.mcclatchy@jax.org","erick.ratamero@jax.org"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
 collaborative_notes:  # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document (e.g., https://pad.carpentries.org/2015-01-01-euphoria)
-eventbrite:           # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
+eventbrite: 137297284875          # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
 ---
 
 {% comment %} See instructions in the comments below for how to edit specific sections of this workshop template. {% endcomment %}
@@ -30,28 +30,6 @@ If the value is not 'true', 'false', 'null', or a number, please use
 double quotation marks around the value, unless specified otherwise.
 And run 'make workshop-check' *before* committing to make sure that changes are good.
 {% endcomment %}
-
-
-{% comment %}
-8< ============= For a workshop delete from here =============
-For a workshop please delete the following block until the next dashed-line
-{% endcomment %}
-
-
-<div class="alert alert-danger">
-This is the workshop template. Delete these lines and use it to
-<a href="https://carpentries.github.io/workshop-template/customization/index.html">customize</a>
-your own website. If you are running a self-organized workshop or have not put
-in a workshop request yet, please also fill in
-<a href="{{site.amy_site}}/forms/self-organised/">this workshop request form</a>
-to let us know about your workshop and our administrator may contact you if we
-need any extra information.
-</div>
-
-{% comment %}
-8< ============================= until here ==================
-{% endcomment %}
-
 
 {% comment %}
 Check DC curriculum
@@ -106,13 +84,7 @@ INTRODUCTION
 Edit the general explanatory paragraph below if you want to change
 the pitch.
 {% endcomment %}
-{% if site.carpentry == "swc" %}
-{% include swc/intro.html %}
-{% elsif site.carpentry == "dc" %}
-{% include dc/intro.html %}
-{% elsif site.carpentry == "lc" %}
-{% include lc/intro.html %}
-{% endif %}
+{% include none/intro.html %}
 
 {% comment %}
 AUDIENCE
@@ -120,13 +92,7 @@ AUDIENCE
 Explain who your audience is.  (In particular, tell readers if the
 workshop is only open to people from a particular institution.
 {% endcomment %}
-{% if site.carpentry == "swc" %}
-{% include swc/who.html %}
-{% elsif site.carpentry == "dc" %}
-{% include dc/who.html %}
-{% elsif site.carpentry == "lc" %}
-{% include lc/who.html %}
-{% endif %}
+{% include none/who.html %}
 
 {% comment %}
 LOCATION
@@ -186,15 +152,8 @@ SPECIAL REQUIREMENTS
 Modify the block below if there are any special requirements.
 {% endcomment %}
 <p id="requirements">
-  <strong>Requirements:</strong>
-  {% if online == "false" %}
-    Participants must bring a laptop with a
-    Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges on.
-  {% else %}
-    Participants must have access to a computer with a
-    Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges on.
-  {% endif %}
-  They should have a few specific software packages installed (listed <a href="#setup">below</a>).
+  <strong>Requirements:</strong> Participants must bring a laptop with a
+  Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.). They should have a few specific software packages installed (listed <a href="#setup">below</a>).
 </p>
 
 {% comment %}
@@ -220,7 +179,6 @@ special instructions.
   you (e.g. sign-language interpreters, lactation facilities) please
   get in touch (using contact details below) and we will
   attempt to provide them.
-</p>
 {% else %}
   We are dedicated to providing a positive and accessible learning environment for all. Please
   notify the instructors in advance of the workshop if you require any accommodations or if there is
@@ -285,20 +243,6 @@ Edit the text to match who can attend the workshop. For instance:
 {% comment%}
 CODE OF CONDUCT
 {% endcomment %}
-<h2 id="code-of-conduct">Code of Conduct</h2>
-
-<p>
-Everyone who participates in Carpentries activities is required to conform to the <a href="https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html">Code of Conduct</a>. This document also outlines how to report an incident if needed.
-</p>
-
-<p class="text-center">
-  <a href="https://goo.gl/forms/KoUfO53Za3apOuOK2">
-    <button type="button" class="btn btn-info">Report a Code of Conduct Incident</button>
-  </a>
-</p>
-<hr/>
-
-
 {% comment %}
 Collaborative Notes
 
@@ -325,10 +269,11 @@ We will use this <a href="{{ page.collaborative_notes }}">collaborative document
 {% comment %}
 SURVEYS - DO NOT EDIT SURVEY LINKS
 {% endcomment %}
-<h2 id="surveys">Surveys</h2>
-<p>Please be sure to complete these surveys before and after the workshop.</p>
-<p><a href="{{ site.pre_survey }}{{ site.github.project_title }}">Pre-workshop Survey</a></p>
-<p><a href="{{ site.post_survey }}{{ site.github.project_title }}">Post-workshop Survey</a></p>
+<h2 id="surveys">Post-workshop survey</h2>
+
+<p>
+Please complete this brief anonymous <a href="https://www.surveymonkey.com/r/339NM8K">post-workshop survey</a> to help us understand the impact of this training. Thanks!
+</p>
 
 <hr/>
 
@@ -336,37 +281,38 @@ SURVEYS - DO NOT EDIT SURVEY LINKS
 {% comment %}
 SCHEDULE
 
-Show the workshop's schedule.
-
-Small changes to the schedule can be made by modifying the
-`schedule.html` found in the `_includes` folder for your
-workshop type (`swc`, `lc`, or `dc`). Edit the items and
-times in the table to match your plans. You may also want to
-change 'Day 1' and 'Day 2' to be actual dates or days of the
-week.
-
-For larger changes, a blank template for a 4-day workshop
-(useful for online teaching for instance) can be found in
-`_includes/custom-schedule.html`. Add the times, and what
-you will be teaching to this file. You may also want to add
-rows to the table if you wish to break down the schedule
-further. To use this custom schedule here, replace the block
-of code below the Schedule `<h2>` header below with
-`{% include custom-schedule.html %}`.
+Show the workshop's schedule.  Edit the items and times in the table
+to match your plans.  You may also want to change 'Day 1' and 'Day
+2' to be actual dates or days of the week.
 {% endcomment %}
-
 <h2 id="schedule">Schedule</h2>
 
-{% if site.carpentry == "swc" %}
-{% include swc/schedule.html %}
-{% elsif site.carpentry == "dc" %}
-{% include dc/schedule.html %}
-{% elsif site.carpentry == "lc" %}
-{% include lc/schedule.html %}
-{% endif %}
+{% include none/schedule.html %}
 
 <hr/>
 
+{% comment %}
+SYLLABUS
+
+Show what topics will be covered.
+
+1. If your workshop is R rather than Python, remove the comment
+around that section and put a comment around the Python section.
+2. Some workshops will delete SQL.
+3. Please make sure the list of topics is synchronized with what you
+intend to teach.
+4. You may need to move the div's with class="col-md-6" around inside
+the div's with class="row" to balance the multi-column layout.
+
+This is one of the places where people frequently make mistakes, so
+please preview your site before committing, and make sure to run
+'tools/check' as well.
+{% endcomment %}
+<h2 id="syllabus">Syllabus</h2>
+
+{% include none/syllabus.html %}
+
+<hr/>
 
 {% comment %}
 SETUP
@@ -395,11 +341,8 @@ please preview your site before committing, and make sure to run
   you will need access to the software described below.
   In addition, you will need an up-to-date web browser.
 </p>
-<p>
-  We maintain a list of common issues that occur during installation as a reference for instructors
-  that may be useful on the
-  <a href = "{{site.swc_github}}/workshop-template/wiki/Configuration-Problems-and-Solutions">Configuration Problems and Solutions wiki page</a>.
-</p>
+
+{% include none/setup.html %}
 
 {% comment %}
 For online workshops, the section below provides:
@@ -413,17 +356,4 @@ to include the relevant installation instrucctions.
 {% endcomment %}
 {% if online != "false" %}
 {% include install_instructions/videoconferencing.html %}
-{% endif %}
-
-{% comment %}
-These are the installation instructions for the tools used
-during the workshop.
-{% endcomment %}
-
-{% if site.carpentry == "swc" %}
-{% include swc/setup.html %}
-{% elsif site.carpentry == "dc" %}
-{% include dc/setup.html %}
-{% elsif site.carpentry == "lc" %}
-{% include lc/setup.html %}
 {% endif %}
